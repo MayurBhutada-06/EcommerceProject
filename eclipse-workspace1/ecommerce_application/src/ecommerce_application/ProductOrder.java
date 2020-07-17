@@ -3,12 +3,14 @@ package ecommerce_application;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -22,12 +24,14 @@ public class ProductOrder {
 		driver.get("http://automationpractice.com/index.php");
 		driver.findElement(By.xpath("(//a[@href='http://automationpractice.com/index.php?controller=my-account'])[1]"))
 				.click();
-		driver.findElement(By.id("email_create")).sendKeys("jbhutada53@gmail.com");
+		driver.findElement(By.id("email_create")).sendKeys("jbhutada44@gmail.com");
 		driver.findElement(By.xpath("//*[@id='SubmitCreate']")).click();
 		driver.findElement(By.id("id_gender1")).click();
+		driver.findElement(By.id("customer_firstname")).clear();
 		driver.findElement(By.id("customer_firstname")).sendKeys("Mayur");
+		driver.findElement(By.id("customer_lastname")).clear();
 		driver.findElement(By.id("customer_lastname")).sendKeys("Bhutada");
-		driver.findElement(By.id("passwd")).sendKeys("Jaigajanan@53");
+		driver.findElement(By.id("passwd")).sendKeys("Jaigajanan@44");
 		Select s = new Select(driver.findElement(By.id("days")));
 		s.selectByIndex(6);
 		Select s1 = new Select(driver.findElement(By.id("months")));
@@ -54,14 +58,12 @@ public class ProductOrder {
 		driver.get("http://automationpractice.com/index.php");
 		driver.findElement(By.xpath("(//a[@href='http://automationpractice.com/index.php?controller=my-account'])[1]"))
 				.click();
-		driver.findElement(By.id("email")).sendKeys("jbhutada53@gmail.com");
-		driver.findElement(By.id("passwd")).sendKeys("Jaigajanan@53");
+		driver.findElement(By.id("email")).sendKeys("jbhutada44@gmail.com");
+		driver.findElement(By.id("passwd")).sendKeys("Jaigajanan@44");
 		driver.findElement(By.xpath("//*[@id='SubmitLogin']")).click();
 
 		driver.findElement(By.xpath("(//*[@class='sf-with-ul'])[1]")).click();
 		driver.findElement(By.xpath("//*[@src='http://automationpractice.com/img/p/7/7-home_default.jpg']")).click();
-		
-		
 		
 		driver.findElement(By.xpath("//*[@id='quantity_wanted']")).clear();
 		driver.findElement(By.xpath("//*[@id='quantity_wanted']")).sendKeys("2");
