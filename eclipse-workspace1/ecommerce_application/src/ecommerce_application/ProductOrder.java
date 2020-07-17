@@ -22,12 +22,12 @@ public class ProductOrder {
 		driver.get("http://automationpractice.com/index.php");
 		driver.findElement(By.xpath("(//a[@href='http://automationpractice.com/index.php?controller=my-account'])[1]"))
 				.click();
-		driver.findElement(By.id("email_create")).sendKeys("jbhutada56@gmail.com");
+		driver.findElement(By.id("email_create")).sendKeys("jbhutada53@gmail.com");
 		driver.findElement(By.xpath("//*[@id='SubmitCreate']")).click();
 		driver.findElement(By.id("id_gender1")).click();
 		driver.findElement(By.id("customer_firstname")).sendKeys("Mayur");
 		driver.findElement(By.id("customer_lastname")).sendKeys("Bhutada");
-		driver.findElement(By.id("passwd")).sendKeys("Jaigajanan@56");
+		driver.findElement(By.id("passwd")).sendKeys("Jaigajanan@53");
 		Select s = new Select(driver.findElement(By.id("days")));
 		s.selectByIndex(6);
 		Select s1 = new Select(driver.findElement(By.id("months")));
@@ -54,8 +54,8 @@ public class ProductOrder {
 		driver.get("http://automationpractice.com/index.php");
 		driver.findElement(By.xpath("(//a[@href='http://automationpractice.com/index.php?controller=my-account'])[1]"))
 				.click();
-		driver.findElement(By.id("email")).sendKeys("jbhutada56@gmail.com");
-		driver.findElement(By.id("passwd")).sendKeys("Jaigajanan@56");
+		driver.findElement(By.id("email")).sendKeys("jbhutada53@gmail.com");
+		driver.findElement(By.id("passwd")).sendKeys("Jaigajanan@53");
 		driver.findElement(By.xpath("//*[@id='SubmitLogin']")).click();
 
 		driver.findElement(By.xpath("(//*[@class='sf-with-ul'])[1]")).click();
